@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/back">
+    android:background="@drawable/backdois">
 
     <LinearLayout
         android:id="@+id/primaryLinear"
@@ -37,9 +37,10 @@
             <EditText
                 android:id="@+id/edt_one"
                 android:layout_width="87dp"
-                android:layout_height="47dp"
+                android:layout_height="48dp"
                 android:inputType="number"
-                />
+                android:textAlignment="center"
+                android:textSize="25sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -66,8 +67,10 @@
             <EditText
                 android:id="@+id/edt_two"
                 android:layout_width="87dp"
-                android:layout_height="47dp"
-                android:inputType="number" />
+                android:layout_height="48dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="25sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -79,8 +82,10 @@
             <EditText
                 android:id="@+id/edt_three"
                 android:layout_width="87dp"
-                android:layout_height="47dp"
-                android:inputType="number" />
+                android:layout_height="48dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="25sp" />
 
         </LinearLayout>
 
@@ -110,9 +115,12 @@
         android:visibility="invisible">
 
         <TextView
+            android:id="@+id/textFinal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="O número sorteado é: "
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
             android:textStyle="bold"
             android:textSize="36sp"/>
 
@@ -123,7 +131,21 @@
             android:text=""
             android:textStyle="bold"
             android:textSize="36sp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:textColor="@color/white"
+            android:background="#7A000000"/>
+
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:textSize="25sp"
+            android:backgroundTint="#31418F"
+            android:layout_marginTop="30dp"/>
 
     </LinearLayout>
 
