@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
                 edtTwo = Integer.parseInt(edt_two.getText().toString());
                 edtThree = Integer.parseInt(edt_three.getText().toString());
 
-                if(edtOne > 0){
+
+                if(edtOne > 0 && edtTwo > 0 && edtThree > 0){
 
                     List<String> array = new ArrayList<>();
                     int i;
@@ -68,9 +70,14 @@ public class MainActivity extends AppCompatActivity {
                     if(edtOne >= 2){
                         primaryLinear.setVisibility(View.GONE);
                         secondaryLinear.setVisibility(View.VISIBLE);
-                        textFinal.setText("Os números sorteados são: ");
+                        textFinal.setText(R.string.title_two);
                         edtnumSor.setText(array.toString());
+                    }else{
+                        textFinal.setText(R.string.title_one);
                     }
+                }else{
+
+                    Toast.makeText(MainActivity.this, R.string.toast, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -80,9 +87,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 primaryLinear.setVisibility(View.VISIBLE);
                 secondaryLinear.setVisibility(View.GONE);
-                edt_one.setText("");
-                edt_two.setText("");
-                edt_three.setText("");
+                edt_one.setText("0");
+                edt_two.setText("0");
+                edt_three.setText("0");
             }
         });
 
